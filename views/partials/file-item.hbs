@@ -1,0 +1,14 @@
+<div class="file-item" data-file-info="{{file.id}}">
+  <div class="file-item__id">{{file.id}}</div>
+  <div class="file-item__icon-wrapper">
+    <img class="file-item__icon" src="{{iconByMimeType file.type}}">
+  </div>
+  <div class="file-item__name">{{file.name}}</div>
+  <div class="file-item__size">{{formatSize file.size}}</div>
+  <div class="file-item__type">{{file.type}}</div>
+  <div class="file-item__controls-wrapper">
+    <a href="/info/{{file.id}}"><i class="icon-help"></i></a>
+    <a href="/uploads/{{file.name}}" download><i class="icon-download"></i></a>
+    <a href="/delete/{{file.id}}" class="hover-red"><i class="icon-cancel"></i></a>
+  </div>
+</div>

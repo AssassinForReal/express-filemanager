@@ -1,0 +1,19 @@
+<div class="sidebar">
+  <nav>
+    <a class="sidebar__link" href="/filemanager">
+      <i class="icon-folder"></i>File Manager
+    </a>
+    <a class="sidebar__link" href="/upload">
+      <i class="icon-upload-cloud"></i>Upload
+    </a>
+    <a class="sidebar__link" href="/info">
+      <i class="icon-help"></i>Info
+    </a>
+  </nav>
+
+  {{#if displayClear}}
+     <a class="sidebar__link sidebar__link--clear" href="/clear">
+      <i class="icon-cancel"></i>Delete all files
+    </a>
+  {{/if}}
+</div>

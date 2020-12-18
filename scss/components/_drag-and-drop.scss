@@ -1,0 +1,41 @@
+.js-drag-and-drop {
+  background-color: #eee;
+  height: 200px;
+  margin: 20px 0;
+  border: 3px dashed #ddd;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  color: #777;
+  transition: all 0.1s ease-in-out;
+  padding: 10px;
+
+  &__empty {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-file {
+    padding: 10px;
+    background-color: #ddd;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+
+    &__name {
+    }
+
+    &__remove {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+
+  &.highlight {
+    background-color: rgb(210, 219, 245);
+    border-color: rgb(117, 143, 221);
+  }
+}

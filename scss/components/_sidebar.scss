@@ -1,0 +1,31 @@
+.sidebar {
+  background-color: #262626;
+  color: #ddd;
+  flex: 0 0 240px;
+  padding: 20px 15px;
+  min-height: 100vh;
+
+  &__link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    margin-bottom: 20px;
+
+    &:hover {
+      color: #fff;
+    }
+
+    i {
+      margin-right: 5px;
+    }
+
+    &--clear {
+      color: red;
+      transition: all 0.1s ease-out;
+
+      &:hover {
+        color: darken(red, 10%);
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<div class="content-wrapper">
+  <h1>Upload files</h1>
+
+  <div class="js-drag-and-drop" data-target="#files">
+    <div class="js-drag-and-drop__empty">
+      Drag and drop files here
+    </div>
+  </div>
+
+  <form id="form" action="/upload" method="POST" enctype="multipart/form-data">
+    <input class="hidden" name="files" type="file" id="files" multiple accept="*/*" required>
+    <button type="submit">Upload files</button>
+  </form>
+</div>
+
+<script src="js/drag-and-drop.js"></script>

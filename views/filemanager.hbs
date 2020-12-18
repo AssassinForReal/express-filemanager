@@ -1,0 +1,19 @@
+<div class="file-list">
+  <div class="file-list__header">
+    <div class="file-item">
+      <div class="file-item__id">Id</div>
+      <div class="file-item__icon-wrapper">Icon</div>
+      <div class="file-item__name">Name</div>
+      <div class="file-item__size">Size</div>
+      <div class="file-item__type">Type</div>
+      <div class="file-item__controls-wrapper"></div>
+    </div>
+  </div>
+  <div class="file-list__body">
+    {{#each files}}
+      {{> file-item file=this}}
+    {{/each}}
+  </div>
+</div>
+
+<script src="js/file-info.js"></script>

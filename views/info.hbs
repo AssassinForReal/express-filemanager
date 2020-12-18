@@ -1,0 +1,36 @@
+<div class="content-wrapper">
+  {{#if file}}
+
+  <div class="file-info">
+    <div class="file-info__record">
+      <div class="file-info__key">Id:</div>
+      <div class="file-info__value">{{file.id}}</div>
+    </div>
+    <div class="file-info__record">
+      <div class="file-info__key">Name:</div>
+      <div class="file-info__value">{{file.name}}</div>
+    </div>
+    <div class="file-info__record">
+      <div class="file-info__key">Path:</div>
+      <div class="file-info__value">{{file.path}}</div>
+    </div>
+    <div class="file-info__record">
+      <div class="file-info__key">Size:</div>
+      <div class="file-info__value">{{formatSize file.size}}</div>
+    </div>
+    <div class="file-info__record">
+      <div class="file-info__key">Type:</div>
+      <div class="file-info__value">{{file.type}}</div>
+    </div>
+    <div class="file-info__record">
+      <div class="file-info__key">Last modified:</div>
+      <div class="file-info__value">{{formatDate file.lastModifiedDate}}</div>
+    </div>
+  </div>
+
+  {{else}}
+
+  File not found
+
+  {{/if}}
+</div>
