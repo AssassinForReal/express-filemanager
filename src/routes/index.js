@@ -53,8 +53,10 @@ router.route('/upload')
         id: 0, name, path, lastModifiedDate, type, size
       })
     })
-
-    res.redirect('/filemanager')
+  
+    form.once('done', () => {
+      res.redirect('/filemanager')
+    })
   })
 
 router.get('/delete/:id', (req, res) => {
