@@ -7,7 +7,7 @@ const router = require('./routes')
 const handlebars = require('express-handlebars')
 const publicPath = require('./asdf')
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3002
 const debug = false
 const app = express()
 
@@ -61,9 +61,11 @@ app.use(sassMiddleware({
 
 app.use(express.static(path.join(__dirname, '..', 'public')))
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}`)
 })
+
+server.timeout = 1000 * 60 * 60
 
 process.on('uncaughtException', (err) => {
   console.error(err.stack);
