@@ -40,8 +40,6 @@ router.route('/upload')
     const uploadDir = path.join(publicPath, 'uploads')
     fs.promises.mkdir(uploadDir, { recursive: true });
 
-    form.parse(req)
-
     form.on('fileBegin', (inputName, file) => {
       if (!file.name) throw ''
       file.path = path.join(uploadDir, file.name)
@@ -54,9 +52,11 @@ router.route('/upload')
       })
     })
   
-    form.once('done', () => {
+    form.once('end', () => {
       res.redirect('/filemanager')
     })
+
+    form.parse(req)
   })
 
 router.get('/delete/:id', (req, res) => {
