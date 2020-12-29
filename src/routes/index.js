@@ -3,7 +3,7 @@ const { IncomingForm } = require('formidable')
 const path = require('path')
 const fs = require('fs')
 const storage = require('../storage')
-const publicPath = require('../asdf')
+const publicPath = require('../utils')
 
 const router = Router()
 

@@ -5,7 +5,7 @@ const mime = require('mime')
 const sassMiddleware = require('node-sass-middleware')
 const router = require('./routes')
 const handlebars = require('express-handlebars')
-const publicPath = require('./asdf')
+const publicPath = require('./utils')
 
 const port = process.env.PORT || 3002
 const debug = false
@@ -40,7 +40,7 @@ app.engine('hbs', handlebars({
     formatDate: (date) => {
       if (!date) return ''
 
-      return `${date.getUTCDay()}.${date.getUTCMonth() + 1}.${date.getUTCFullYear()} ${date.getUTCHours()}:${date.getUTCMinutes()}:${date.getUTCSeconds()} (UTC)`
+      return `${date.getDate()}.${date.getMonth() + 1}.${date.getUTCFullYear()} ${date.getHours() + 1}:${date.getMinutes()}:${date.getSeconds()}`
     }
   }
 }))
